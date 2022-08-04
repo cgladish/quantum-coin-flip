@@ -82,8 +82,38 @@ section {
   }
 }
 
+@keyframes hover {
+  0% {
+    -ms-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+
+  50% {
+    -ms-transform: translateY(-20px);
+    -moz-transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+    -o-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  100% {
+    -ms-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+
+#coin.animating {
+  animation: hover 1.5s ease-in-out infinite;
+}
+
 #coin.flipping {
-  animation: flip 4s cubic-bezier(0.1, 0, 1, 1);
+  animation: flip 4s ease-in-out;
 }
 
 .flipped-heads {
@@ -211,7 +241,7 @@ section {
   position: absolute;
   top: 10px;
   width: 100%;
-  z-index: 0;
+  z-index: -1;
 }
 
 #diagram img {

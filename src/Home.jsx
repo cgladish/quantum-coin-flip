@@ -30,7 +30,7 @@ class Home extends Nullstack {
       !this.flipping && this.flipResult ? (this.flipResult === "heads" ? "flipped-heads" : "flipped-tails") : "";
     return (
       <section>
-        <div id="coin" class={`${flippingClass} ${flippedClass}`} onclick={this.toss}>
+        <div id="coin" class={`${animatingClass} ${flippingClass} ${flippedClass}`} onclick={this.toss}>
           <div class="heads">
             <div class="internal">{"|1>"}</div>
           </div>
