@@ -18,7 +18,7 @@ section {
   cursor: pointer;
 }
 
-.tails {
+.heads {
   transform: rotateX(180deg);
 }
 
@@ -65,23 +65,6 @@ section {
   }
 }
 
-@keyframes flip-tails {
-  0% {
-    -ms-transform: rotateX(0deg);
-    -moz-transform: rotateX(0deg);
-    -webkit-transform: rotateX(0deg);
-    -o-transform: rotateX(0deg);
-    transform: rotateX(0deg);
-  }
-  100% {
-    -ms-transform: rotateX(180deg);
-    -moz-transform: rotateX(900deg);
-    -webkit-transform: rotateX(900deg);
-    -o-transform: rotateX(900deg);
-    transform: rotateX(900deg);
-  }
-}
-
 @keyframes hover {
   0% {
     -ms-transform: translateY(0px);
@@ -117,19 +100,19 @@ section {
 }
 
 .flipped-heads {
-  -ms-transform: rotateX(0deg);
-  -moz-transform: rotateX(0deg);
-  -webkit-transform: rotateX(0deg);
-  -o-transform: rotateX(0deg);
-  transform: rotateX(0deg);
-}
-
-.flipped-tails {
   -ms-transform: rotateX(180deg);
   -moz-transform: rotateX(180deg);
   -webkit-transform: rotateX(180deg);
   -o-transform: rotateX(180deg);
   transform: rotateX(180deg);
+}
+
+.flipped-tails {
+  -ms-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  -webkit-transform: rotateX(0deg);
+  -o-transform: rotateX(0deg);
+  transform: rotateX(0deg);
 }
 
 #diagram {
@@ -189,13 +172,13 @@ section {
   left: 0;
 }
 
-.animating #qubit-text-1 {
+.animating #qubit-text-0 {
   opacity: 1;
 }
 
 .flipping #qubit-text-root2-0,
-.flipping #qubit-text-0,
-.flipping #qubit-text-root2-1 {
+.flipping #qubit-text-root2-1,
+.flipping #qubit-text-1 {
   opacity: 1;
 }
 

@@ -7,6 +7,9 @@ class Home extends Nullstack {
   flipResult = null;
 
   toss = () => {
+    if (this.animating) {
+      return;
+    }
     this.animating = true;
     this.flipResult = null;
     setTimeout(() => {
