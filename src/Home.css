@@ -1,3 +1,17 @@
+#header {
+  position: fixed;
+  top: 0;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: flex-end;
+  width: 100vw;
+}
+
+#header img {
+  height: 30px;
+  width: 30px;
+}
+
 section {
   min-width: 800px;
   max-width: 800px;
@@ -286,4 +300,5 @@ p {
 
 #explanation {
   margin-top: 30px;
+  margin-bottom: 30px;
 }

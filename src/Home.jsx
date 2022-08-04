@@ -34,6 +34,11 @@ class Home extends Nullstack {
       !this.flipping && this.flipResult ? (this.flipResult === "heads" ? "flipped-heads" : "flipped-tails") : "";
     return (
       <>
+        <div id="header">
+          <a href="https://github.com/cgladish/quantum-coin-flip" target="_blank">
+            <img src="github.png" />
+          </a>
+        </div>
         <section id="coin-toss">
           <div id="coin" class={`${animatingClass} ${flippingClass} ${flippedClass}`} onclick={this.toss}>
             <div class="heads">
