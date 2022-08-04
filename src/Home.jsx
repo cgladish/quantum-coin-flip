@@ -66,42 +66,58 @@ class Home extends Nullstack {
           </p>
           <h3>What does that mean?</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a leo ultricies, rhoncus dolor non,
-            pharetra leo. Vestibulum aliquet neque quis faucibus facilisis. Morbi pharetra placerat enim a vestibulum.
-            Aliquam erat volutpat. Praesent interdum arcu pharetra ornare cursus. Morbi laoreet tortor in pulvinar
-            viverra. Aenean vitae auctor lorem, sit amet tincidunt sem. Sed nec nisi ut dolor tincidunt tristique.
-            Suspendisse maximus nulla lobortis nisi viverra egestas. Nam ultricies blandit dolor at fringilla. Nulla
-            facilisi. Quisque tempor ipsum ut dolor maximus, eu congue elit cursus.
+            How do computers pick random numbers? While this task is seemingly simple, there’s a whole world of
+            important complexity beneath the surface.
           </p>
           <p>
-            Nulla a odio fringilla, elementum ipsum sed, luctus orci. Donec nulla ipsum, tempor id dignissim eu, aliquet
-            ut tellus. Morbi nibh sapien, sodales eu justo sit amet, rutrum ullamcorper erat. Proin quis gravida ante.
-            Pellentesque at porttitor turpis. Pellentesque vestibulum lacus nec nunc fermentum, a efficitur nibh
-            lacinia. Nulla tempus non nunc at ultrices.
+            Computers are built on ‘bits’, or little electrical switches that can be either on or off. In a sense,
+            computers are valuable only because they are NOT random at all. Chip processors have invested billions over
+            decades to ensure that their bits are completely deterministic so that our cat videos will load reliably.
           </p>
           <p>
-            Pellentesque eget felis est. Mauris condimentum blandit consequat. Cras rutrum nisl dui, vitae iaculis nibh
-            congue vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque suscipit, nunc id maximus
-            tempor, neque nisl vulputate enim, at sollicitudin nulla leo quis risus. In vel commodo ligula, ac dignissim
-            diam. In eu velit tortor. Vivamus vehicula sit amet mauris in luctus. Morbi cursus mi lacinia massa euismod
-            suscipit. Morbi cursus lorem tincidunt ipsum dignissim, vulputate mollis nibh dignissim. Ut dignissim, risus
-            sed tristique fermentum, nunc augue iaculis risus, ac egestas elit est et felis. Nulla finibus non sapien
-            nec fermentum.
+            Take a second to think about the basic logic gates, and how you would build instructions that result in a
+            computer returning a number randomly.
           </p>
           <p>
-            Suspendisse ultrices ante ut dapibus venenatis. Duis a augue vel felis sollicitudin facilisis. Vivamus
-            interdum faucibus eros sed semper. Sed iaculis condimentum auctor. Duis porttitor massa id massa porttitor
-            condimentum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla
-            porttitor volutpat nibh. Nunc auctor arcu non ligula finibus imperdiet.
+            Surprisingly difficult, right? You can actually find doctorate programs simply on the mathematics of
+            randomness!
           </p>
           <p>
-            Etiam non felis ac dolor ultricies accumsan id mollis orci. Proin ultricies imperdiet est eu viverra. Etiam
-            nisi turpis, posuere lobortis placerat id, eleifend id nunc. Cras eget turpis felis. Quisque mauris orci,
-            molestie a nulla vitae, tempor vestibulum quam. Vestibulum sed elit non erat ultrices mattis. Curabitur dui
-            nisl, cursus vel tempor eget, posuere at libero. Phasellus pharetra elit in leo interdum tempus. Vivamus vel
-            odio non massa cursus scelerisque. Quisque non mi purus. Cras faucibus interdum ipsum, at venenatis felis
-            sodales eu. Nulla facilisi. Duis justo tellus, dapibus at dapibus eu, sagittis eu est. Fusce in lectus nec
-            lacus posuere lacinia. Vivamus velit lectus, malesuada a aliquet ac, aliquet eu dolor.
+            It turns out that this problem is actually important - specifically, the ability for computers to select a
+            random number in such a way that no human (or external computer) can predict what number will be selected.
+            This functionality is important in a few ways: Lottery drawings must be fair and unpredictable Digital
+            gambling games must be truly random (think of a digital card deck shuffle) Perhaps most importantly, random
+            number generation is an important piece of cryptography. To keep information secure, numeric components of
+            cryptographic methods (like keys) must be generated in a way that hackers cannot predict.
+          </p>
+          <p>
+            Today, computers generate random numbers in 1 of 2 ways: For less important applications, pseudo-random
+            numbers do just fine. This means that while the number is not truly random (and may be predictable with
+            enough work), it is based on such irrelevant data that it’s arbitrary enough. (pick the value of the current
+            millisecond, multiply that by X, subtract Y, divide by Z...) For critical applications (like the ones listed
+            above), the computer must actually use information outside of itself to “seed” random information. For
+            example, random.org collects atmospheric data to generate random numbers. While this is truly random in any
+            practical sense, there are 2 caveats: Even atmospheric noise has patterns, and random.org does process the
+            raw data they collect before displaying it From a theoretical perspective, you actually could predict
+            atmospheric noise if you could accurately simulate the movement of molecules surrounding the sensor! This is
+            infeasible but, again, not provably impossible, and folks have done some wild things to predict
+            randomness...
+          </p>
+          <p>ENTER quantum computing.</p>
+          <p>
+            Quantum computers are a fundamentally new form of computing information. Quantum computers use qubits
+            (quantum bits) that utilize what we know of quantum mechanics to enable previously impossible calculations.{" "}
+          </p>
+          <p>One such example is randomness - true randomness.</p>
+          <h3>What happens when the coin flips?</h3>
+          <p>
+            When the coin above is flipped, a quantum computer at IBM prepares a superconducting circuit (which is a
+            type of qubit).
+          </p>
+          <p>
+            Upon ‘measurement’, the superposition collapses back into either a 1 or a 0 with equal probability, but
+            importantly, there is strong theoretical basis for believing that no one will ever be able to predict which
+            will occur. It is, in a profound sense, harnessing the inherent entropy of the universe itself.
           </p>
         </section>
       </>
