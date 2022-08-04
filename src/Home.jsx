@@ -1,36 +1,51 @@
 import Nullstack from "nullstack";
-import Logo from "nullstack/logo";
 import "./Home.css";
 
 class Home extends Nullstack {
+  animating = false;
   flipping = false;
   flipResult = null;
 
   toss = () => {
-    this.flipping = true;
+    this.animating = true;
+    this.flipResult = null;
     setTimeout(() => {
-      this.flipping = false;
+      this.flipping = true;
     }, 3000);
-    if (Math.random() < 0.5) {
-      this.flipResult = "heads";
-    } else {
-      this.flipResult = "tails";
-    }
+    setTimeout(() => {
+      this.animating = false;
+      this.flipping = false;
+      if (Math.random() < 0.5) {
+        this.flipResult = "heads";
+      } else {
+        this.flipResult = "tails";
+      }
+    }, 6000);
   };
 
   render() {
+    const animatingClass = this.animating ? "animating" : "";
     const flippingClass = this.flipping ? "flipping" : "";
     const flippedClass =
       !this.flipping && this.flipResult ? (this.flipResult === "heads" ? "flipped-heads" : "flipped-tails") : "";
     return (
       <section>
-        <div>
-          <div id="coin" class={`${flippingClass} ${flippedClass}`} onclick={this.toss}>
-            <div class="heads">
-              <div class="internal">{"|1>"}</div>
-            </div>
-            <div class="tails">
-              <div class="internal">{"|0>"}</div>
+        <div id="coin" class={`${flippingClass} ${flippedClass}`} onclick={this.toss}>
+          <div class="heads">
+            <div class="internal">{"|1>"}</div>
+          </div>
+          <div class="tails">
+            <div class="internal">{"|0>"}</div>
+          </div>
+        </div>
+        <div id="diagram">
+          <div id="qubit" class={`${animatingClass} ${flippingClass} ${flippedClass}`}>
+            <div id="qubit-dot"></div>
+            <div id="qubit-text">
+              <div id="qubit-text-0">{this.flipping || this.flippedClass === "tails" ? "√2|0> + √2" : ""}</div>
+              <div id="qubit-text-1">
+                {this.animation || !this.flippedClass || this.flippedClass === "heads" ? "|1>" : ""}
+              </div>
             </div>
           </div>
         </div>

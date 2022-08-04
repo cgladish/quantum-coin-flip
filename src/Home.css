@@ -4,7 +4,8 @@ section {
   min-height: 100vh;
   margin: 0 auto;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   padding: 1.5em;
 }
 
@@ -81,7 +82,7 @@ section {
   }
 }
 
-.flipping {
+#coin.flipping {
   animation: flip 5s cubic-bezier(0.1, 0, 1, 1);
 }
 
@@ -99,4 +100,78 @@ section {
   -webkit-transform: rotateX(180deg);
   -o-transform: rotateX(180deg);
   transform: rotateX(180deg);
+}
+
+#diagram {
+  width: 400px;
+  height: 200px;
+  border: 1px solid white;
+}
+
+#qubit-dot {
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+#qubit {
+  font-weight: 800;
+  font-size: 20px;
+}
+
+@keyframes slideright {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(400px);
+  }
+}
+
+#qubit.animating {
+  animation: slideright 6s linear;
+}
+
+#qubit.flipped-heads,
+#qubit.flipped-tails {
+  transform: translateX(400px);
+}
+
+#qubit-text {
+  position: relative;
+}
+
+.flipping #qubit-text {
+  transition: transform 1s ease-in-out;
+  transform: translateX(-58px);
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#qubit-text-0,
+#qubit-text-1 {
+  display: inline-block;
+}
+
+#qubit-text-1 {
+  position: absolute;
+  left: 0;
+}
+
+.flipping #qubit-text-0 {
+  animation: fadein 1s linear;
+}
+
+.flipping #qubit-text-1 {
+  transition: transform 1s ease-in-out;
+  transform: translateX(110px);
 }
