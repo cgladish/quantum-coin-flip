@@ -194,25 +194,30 @@ section {
 }
 
 .flipping #qubit-text-root2-0,
+.flipping #qubit-text-plus,
 .flipping #qubit-text-root2-1,
 .flipping #qubit-text-1 {
   opacity: 1;
 }
 
 .flipping #qubit-text-root2-0 {
-  transform: translateX(-59px);
+  transform: translateX(-50px);
 }
 
 .flipping #qubit-text-0 {
   transform: translateX(-29px);
 }
 
+.flipping #qubit-text-plus {
+  transform: translateX(3px);
+}
+
 .flipping #qubit-text-root2-1 {
-  transform: translateX(4px);
+  transform: translateX(20px);
 }
 
 .flipping #qubit-text-1 {
-  transform: translateX(53px);
+  transform: translateX(43px);
 }
 
 .flipped-heads #qubit-text-1 {
@@ -302,4 +307,24 @@ p {
   line-height: 1.5;
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+#qubit-text-root2-0,
+#qubit-text-root2-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  top: -2px;
+}
+#qubit-text-root2-0 p,
+#qubit-text-root2-1 p {
+  margin: 0;
+}
+
+#qubit-text-root2-0 hr,
+#qubit-text-root2-1 hr {
+  position: relative;
+  top: 0;
 }

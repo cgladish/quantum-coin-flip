@@ -52,9 +52,18 @@ class Home extends Nullstack {
             <div id="qubit" class={`${animatingClass} ${flippingClass} ${flippedClass}`}>
               <div id="qubit-dot" />
               <div id="qubit-text">
-                <div id="qubit-text-root2-0">√2</div>
+                <div id="qubit-text-root2-0">
+                  <p>1</p>
+                  <hr />
+                  <p>√2</p>
+                </div>
                 <div id="qubit-text-0">{"|0>"}</div>
-                <div id="qubit-text-root2-1"> + √2</div>
+                <div id="qubit-text-plus"> + </div>
+                <div id="qubit-text-root2-1">
+                  <p>1</p>
+                  <hr />
+                  <p>√2</p>
+                </div>
                 <div id="qubit-text-1">{"|1>"}</div>
               </div>
             </div>
