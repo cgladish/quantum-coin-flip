@@ -1,4 +1,5 @@
 import Nullstack from "nullstack";
+import Caret from "./Caret";
 import "./Home.css";
 
 class Home extends Nullstack {
@@ -56,8 +57,8 @@ class Home extends Nullstack {
             <div id="hadamard">H</div>
             <img src="measurement.png" />
           </div>
+          <Caret />
           <h3 id="what">What's going on?</h3>
-          <div id="caret-down" />
         </section>
         <section id="explanation">
           <p>

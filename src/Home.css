@@ -249,7 +249,7 @@ h3 {
 
 #what {
   position: absolute;
-  bottom: 50px;
+  bottom: 20px;
   margin-bottom: 0;
 }
 
@@ -257,14 +257,31 @@ p {
   margin-bottom: 20px;
 }
 
-#caret-down {
-  width: 0;
-  height: 0;
-  border-left: 13px solid transparent;
-  border-right: 13px solid transparent;
-  border-top: 13px solid #fff;
+@keyframes caret {
+  0% {
+    transform: translateY(0px);
+    opacity: 0.2;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(16px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(16px);
+    opacity: 0;
+  }
+}
+
+#caret {
+  width: 40px;
+  height: 30px;
+  filter: invert(100%);
   position: absolute;
-  bottom: 20px;
+  bottom: 60px;
+  animation: caret 2s infinite;
 }
 
 #explanation {
