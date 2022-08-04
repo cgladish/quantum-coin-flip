@@ -1,80 +1,42 @@
-import Nullstack from 'nullstack';
-import Logo from 'nullstack/logo';
-import './Home.css';
+import Nullstack from "nullstack";
+import Logo from "nullstack/logo";
+import "./Home.css";
 
 class Home extends Nullstack {
+  flipping = false;
+  flipResult = null;
 
-  prepare({ project, page }) {
-    page.title = `${project.name} - Welcome to Nullstack!`;
-    page.description = `${project.name} was made with Nullstack`;
-  }
+  toss = () => {
+    this.flipping = true;
+    setTimeout(() => {
+      this.flipping = false;
+    }, 3000);
+    if (Math.random() < 0.5) {
+      this.flipResult = "heads";
+    } else {
+      this.flipResult = "tails";
+    }
+  };
 
-  renderLink({ children, href }) {
-    const link = href + '?ref=create-nullstack-app';
-    return (
-      <a href={link} target="_blank" rel="noopener noreferrer">
-        {children}
-      </a>
-    )
-  }
-
-  render({ project }) {
+  render() {
+    const flippingClass = this.flipping ? "flipping" : "";
+    const flippedClass =
+      !this.flipping && this.flipResult ? (this.flipResult === "heads" ? "flipped-heads" : "flipped-tails") : "";
     return (
       <section>
-        <article>
-          <Link href="https://nullstack.app/">
-            <Logo height={60} light />
-          </Link>
-          <h1> {project.name} </h1>
-          <p>
-            We made some examples to help you getting started! Take a look at the
-            <Link href="vscode://file//Users/chasegladish/quantum-coin-flip/src">
-              src folder
-            </Link>.
-          </p>
-          <span>
-            Hint: we have a
-            <Link href="vscode:extension/ChristianMortaro.vscode-nullstack">
-              VS Code Extension
-            </Link>
-          </span>
-          <ul>
-            <li>
-              <Link href="https://nullstack.app/stateless-components">
-                🎉 Create your first component 
-              </Link>
-            </li>
-            <li>
-              <Link href="https://nullstack.app/routes-and-params">
-                ✨ Set your first route
-              </Link>
-            </li>
-            <li>
-              <Link href="https://nullstack.app/context">
-                ⚡ Define your context
-              </Link>
-            </li>
-            <li>
-              <Link href="https://github.com/nullstack/nullstack/stargazers">
-                ⭐ Leave a star on github
-              </Link>
-            </li>
-            <li>
-              <Link href="https://youtube.com/nullstack">
-                🎬 Subscribe to our Youtube Channel
-              </Link>
-            </li>
-          </ul>
-        </article>
-        <aside>
-          <Link href="https://nullstack.app/waifu">
-            <img src="/nulla-chan.webp" alt="Nulla-Chan: Nullstack's official waifu" />
-          </Link>
-        </aside>
+        <div>
+          <div id="coin" class={`${flippingClass} ${flippedClass}`} onclick={this.toss}>
+            <div class="heads">
+              <div class="internal">{"|1>"}</div>
+            </div>
+            <div class="tails">
+              <div class="internal">{"|0>"}</div>
+            </div>
+          </div>
+        </div>
       </section>
-    )
+    );
   }
-
 }
 
 export default Home;
