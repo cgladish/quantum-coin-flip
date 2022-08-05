@@ -12,6 +12,7 @@ class Application extends Nullstack {
       <head>
         <link href="https://fonts.gstatic.com" rel="preconnect" />
         <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;800&display=swap" rel="stylesheet" />
+        <title>Quantum Coin Flip</title>
       </head>
     );
   }
