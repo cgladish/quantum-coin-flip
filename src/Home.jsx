@@ -40,6 +40,12 @@ class Home extends Nullstack {
           </a>
         </div>
         <section id="coin-toss">
+          <div id="flipped-text-heads" class={flippedClass}>
+            Heads
+          </div>
+          <div id="flipped-text-tails" class={flippedClass}>
+            Tails
+          </div>
           <div id="coin" class={`${animatingClass} ${flippingClass} ${flippedClass}`} onclick={this.toss}>
             <div class="heads">
               <div class="internal">{"|1>"}</div>

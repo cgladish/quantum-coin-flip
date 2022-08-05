@@ -118,7 +118,7 @@ section {
   animation: flip 4s ease-in-out;
 }
 
-.flipped-heads {
+#coin.flipped-heads {
   -ms-transform: rotateX(180deg);
   -moz-transform: rotateX(180deg);
   -webkit-transform: rotateX(180deg);
@@ -126,7 +126,7 @@ section {
   transform: rotateX(180deg);
 }
 
-.flipped-tails {
+#coin.flipped-tails {
   -ms-transform: rotateX(0deg);
   -moz-transform: rotateX(0deg);
   -webkit-transform: rotateX(0deg);
@@ -327,4 +327,21 @@ p {
 #qubit-text-root2-1 hr {
   position: relative;
   top: 0;
+}
+
+#flipped-text-heads,
+#flipped-text-tails {
+  position: absolute;
+  font-size: 42px;
+  top: calc(50% - 250px);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#flipped-text-heads.flipped-heads {
+  opacity: 1;
+}
+
+#flipped-text-tails.flipped-tails {
+  opacity: 1;
 }
