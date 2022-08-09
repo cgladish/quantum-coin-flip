@@ -3,11 +3,11 @@
   top: 0;
   padding: 10px 20px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   width: 100%;
 }
 
-#header img {
+#github-logo {
   height: 30px;
   width: 30px;
 }
