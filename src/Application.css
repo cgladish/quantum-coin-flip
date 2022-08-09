@@ -2,8 +2,11 @@
   padding: 0;
   margin: 0;
   text-decoration: none;
-  list-style: none;
   box-sizing: border-box;
+}
+
+li {
+  margin-left: 50px;
 }
 
 body {
