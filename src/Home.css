@@ -82,11 +82,11 @@ section {
     transform: rotateX(0deg);
   }
   100% {
-    -ms-transform: rotateX(5400deg);
-    -moz-transform: rotateX(5400deg);
-    -webkit-transform: rotateX(5400deg);
-    -o-transform: rotateX(54000deg);
-    transform: rotateX(5400deg);
+    -ms-transform: rotateX(7200deg);
+    -moz-transform: rotateX(7200deg);
+    -webkit-transform: rotateX(7200deg);
+    -o-transform: rotateX(7200deg);
+    transform: rotateX(7200deg);
   }
 }
 
@@ -150,7 +150,7 @@ section {
 #qubit-dot {
   height: 20px;
   width: 20px;
-  background-color: #fff;
+  background-color: rgb(228, 231, 237);
   border-radius: 50%;
   margin-bottom: 5px;
   z-index: 1;
@@ -237,7 +237,7 @@ section {
   position: absolute;
   left: calc(50% - 26px);
   font-size: 24px;
-  border: 2px solid #fff;
+  border: 2px solid rgb(228, 231, 237);
   width: 50px;
   height: 50px;
   display: flex;
