@@ -48,9 +48,7 @@ const Text = () => (
       </li>
       <li>
         <p>
-          Perhaps most importantly, random number generation is a crucial component of&nbsp;cryptography. To keep
-          information secure, numeric components of cryptographic methods (like keys) must be generated in a way that
-          hackers cannot predict.
+        Perhaps most importantly, random number generation is a crucial component of <b>cryptography</b>. To keep information secure, many encryption methods rely on the random generation of a numeric key, and if this key is predictable in any way, then the encryption is useless as a hacker can 'unlock' the information quite easily.
         </p>
       </li>
     </ul>
@@ -122,8 +120,11 @@ const Text = () => (
     <p>
       Upon &lsquo;measurement&rsquo;, the superposition collapses back into either a 1 or a 0 (with equal probability),
       but importantly, there is strong theoretical basis for believing that no one will ever be able to predict which
-      will occur. It is, in a profound sense,&nbsp;harnessing the inherent randomness of the universe itself.<sup>3</sup>
+      will occur. It is, in a profound sense,&nbsp;<b>harnessing the inherent randomness of the universe<sup>3</sup> itself.</b>
     </p>
+
+    <br />
+    <hr />
 
     <h3>What's going on with the diagram below the coin?</h3>
 
@@ -186,7 +187,7 @@ const Text = () => (
     <h3>That's all folks!</h3>
     <p>
       We hope you enjoyed learning a bit about the basics of quantum computing and its applications! The problem of pseudo-random number generation remains unsolved for
-      most applications, and yet, by clicking this coin, you may have generated more truly random numbers than the most
+      most applications, and yet, by clicking the above coin, you may have generated more truly random numbers than the most
       advanced cryptographer only a few years ago.
     </p>
 
@@ -227,7 +228,7 @@ const Text = () => (
     <div class="footnotes">
     <p><sup>1</sup>&nbsp;I wonder how they handle lotteries for enrollment times?</p>
     <p>
-      <sup>2</sup>&nbsp;Yes, I realize that IBM&rsquo;s current machines have queue times, your results might have been
+      <sup>2</sup>&nbsp;Yes, I acknowledge that IBM&rsquo;s current machines have queue times, your results might have been
       pre-calculated on a quantum machine and cached, and thus, still not perfectly random/unhackable. I&rsquo;m making
       a point and a fun toy, not defending my dissertation here.
     </p>
