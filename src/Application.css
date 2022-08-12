@@ -25,3 +25,11 @@ main {
   flex-direction: column;
   align-items: center;
 }
+
+.footer {
+  padding-bottom: 20px;
+}
+
+.red {
+  color: red;
+}

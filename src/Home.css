@@ -207,7 +207,7 @@ section {
 }
 
 .flipping #qubit-text-root2-0 {
-  transform: translateX(-50px);
+  transform: translateX(-52px);
 }
 
 .flipping #qubit-text-0 {
@@ -256,7 +256,7 @@ section {
   z-index: -1;
 }
 
-#diagram img {
+#measurement {
   width: 50px;
   position: absolute;
   top: -7px;
@@ -315,26 +315,6 @@ p {
   margin-bottom: 30px;
 }
 
-#qubit-text-root2-0,
-#qubit-text-root2-1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 12px;
-  top: -2px;
-}
-#qubit-text-root2-0 p,
-#qubit-text-root2-1 p {
-  margin: 0;
-}
-
-#qubit-text-root2-0 hr,
-#qubit-text-root2-1 hr {
-  position: relative;
-  top: 0;
-}
-
 #flipped-text-heads,
 #flipped-text-tails {
   position: absolute;
@@ -350,4 +330,23 @@ p {
 
 #flipped-text-tails.flipped-tails {
   opacity: 1;
+}
+
+#explanation img {
+  vertical-align: middle;
+}
+
+#qubit-text-root2-0,
+#qubit-text-root2-1 {
+  top: -5px;
+}
+
+#qubit-text-root2-0 img,
+#qubit-text-root2-1 img {
+  width: 22px;
+}
+
+.footnotes {
+  margin-top: 80px;
+  font-size: 12px;
 }

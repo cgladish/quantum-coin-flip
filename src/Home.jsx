@@ -63,23 +63,19 @@ class Home extends Nullstack {
               <div id="qubit-dot" />
               <div id="qubit-text">
                 <div id="qubit-text-root2-0">
-                  <p>1</p>
-                  <hr />
-                  <p>√2</p>
+                  <img src="root2.png" />
                 </div>
                 <div id="qubit-text-0">{"|0>"}</div>
                 <div id="qubit-text-plus"> + </div>
                 <div id="qubit-text-root2-1">
-                  <p>1</p>
-                  <hr />
-                  <p>√2</p>
+                  <img src="root2.png" />
                 </div>
                 <div id="qubit-text-1">{"|1>"}</div>
               </div>
             </div>
             <hr />
             <div id="hadamard">H</div>
-            <img src="measurement.png" />
+            <img id="measurement" src="measurement.png" />
           </div>
           <Caret />
           <h3 id="what">What's going on?</h3>

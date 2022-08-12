@@ -22,6 +22,12 @@ class Application extends Nullstack {
       <main>
         <Head />
         <Home route="/" />
+        <div class="footer">
+          Made with <span class="red">❤</span> by{" "}
+          <a href="https://ae.studio" target="_blank">
+            AE Studio
+          </a>
+        </div>
       </main>
     );
   }
