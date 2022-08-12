@@ -1,6 +1,7 @@
 import Nullstack from "nullstack";
 import Caret from "./Caret";
 import Text from "./Text";
+import SectionTitle from "./SectionTitle";
 import "./Home.css";
 
 class Home extends Nullstack {
@@ -78,7 +79,7 @@ class Home extends Nullstack {
             <img id="measurement" src="measurement.png" />
           </div>
           <Caret />
-          <h3 id="what">What's going on?</h3>
+          <SectionTitle id="whats-going-on">What's going on?</SectionTitle>
         </section>
         <section id="explanation">
           <Text />

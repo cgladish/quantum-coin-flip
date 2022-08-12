@@ -1,10 +1,12 @@
+import SectionTitle from './SectionTitle';
+
 const Text = () => (
   <>
     <p>
       <i>You just witnessed a quantum coin toss.</i>
     </p>
 
-    <h3>What does that mean?</h3>
+    <SectionTitle id="what-does-that-mean">What does that mean?</SectionTitle>
 
     <p>
       How do computers pick (pseudo)random numbers? While this task is seemingly simple, there&rsquo;s a whole world of
@@ -101,7 +103,7 @@ const Text = () => (
 
     <p>One such example is randomness -&nbsp;true&nbsp;randomness.</p>
 
-    <h3>What happens when the coin flips?</h3>
+    <SectionTitle id="what-happens-when-the-coin-flips">What happens when the coin flips?</SectionTitle>
 
     <p>
       To determine the coin flip results<sup>2</sup>, a quantum computer at IBM prepares a qubit into an evenly balanced
@@ -126,7 +128,7 @@ const Text = () => (
     <br />
     <hr />
 
-    <h3>What's going on with the diagram below the coin?</h3>
+    <SectionTitle id="whats-going-on-with-the-diagram">What's going on with the diagram below the coin?</SectionTitle>
 
     <p>
       This is a&nbsp;<a href="https://en.wikipedia.org/wiki/Quantum_circuit">quantum circuit diagram</a>, which is a way
@@ -137,7 +139,7 @@ const Text = () => (
       which collapses the state if it is in a superposition.
     </p>
 
-    <h3>So what's with the |0> and |1> thing?</h3>
+    <SectionTitle id="so-whats-with-the-0-and-1-thing">So what's with the |0> and |1> thing?</SectionTitle>
 
     <p>
       These are the quantum basis states for a one-particle system and can be represented in what&rsquo;s called&nbsp;
@@ -148,7 +150,7 @@ const Text = () => (
       think of |0&gt; as the &ldquo;Tails&rdquo; state and |1&gt; as the &ldquo;Heads&rdquo; state.&nbsp;
     </p>
 
-    <h3>And what about the <img src="root2.png" width="30px" />?</h3>
+    <SectionTitle id="and-what-about-the-root2">And what about the <img src="root2.png" width="30px" />?</SectionTitle>
 
     <p>
       This represents the&nbsp;amplitude&nbsp;that each basis state has in the state representation of a qubit.&nbsp;The
@@ -174,7 +176,7 @@ const Text = () => (
       measured, which is a good quantum approximation for a 50/50 coin flip!
     </p>
 
-    <h3>And the H?</h3>
+    <SectionTitle id="and-the-h">And the H?</SectionTitle>
 
     <p>
       This is a Hadamard gate, which is a specific type of&nbsp;
@@ -184,7 +186,7 @@ const Text = () => (
       is exactly what we need.
     </p>
 
-    <h3>That's all folks!</h3>
+    <SectionTitle id="thats-all-folks">That's all folks!</SectionTitle>
     <p>
       We hope you enjoyed learning a bit about the basics of quantum computing and its applications! The problem of pseudo-random number generation remains unsolved for
       most applications, and yet, by clicking the above coin, you may have generated more truly random numbers than the most
@@ -195,7 +197,7 @@ const Text = () => (
     <hr />
 
     <br />
-    <h3>Learn More</h3>
+    <SectionTitle id="learn-more">Learn More</SectionTitle>
 
     <p>
       Is anyone actually using Quantum Random Number Generators (QRNGs) today? Yes! For example, the latest&nbsp;

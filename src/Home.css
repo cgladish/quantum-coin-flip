@@ -272,7 +272,7 @@ h3 {
   width: 100%;
 }
 
-#what {
+#whats-going-on {
   position: absolute;
   bottom: 20px;
   margin-bottom: 0;
@@ -349,4 +349,22 @@ p {
 .footnotes {
   margin-top: 80px;
   font-size: 12px;
+}
+
+.section-title .hover-hashtag {
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+  display: inline;
+}
+
+.section-title svg {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.section-title:hover .hover-hashtag {
+  opacity: 0.7;
+  transition: opacity 0.2s;
 }
