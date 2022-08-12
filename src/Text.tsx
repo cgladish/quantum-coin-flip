@@ -183,8 +183,9 @@ const Text = () => (
       is exactly what we need.
     </p>
 
+    <h3>That's all folks!</h3>
     <p>
-      The problem of pseudo-random number generation remains unsolved for
+      We hope you enjoyed learning a bit about the basics of quantum computing and its applications! The problem of pseudo-random number generation remains unsolved for
       most applications, and yet, by clicking this coin, you may have generated more truly random numbers than the most
       advanced cryptographer only a few years ago.
     </p>
