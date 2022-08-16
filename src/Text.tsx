@@ -191,6 +191,10 @@ const Text = () => (
       is exactly what we need.
     </p>
 
+    <br />
+    <hr />
+
+    <br />
     <SectionTitle id="thats-all-folks">That's all folks!</SectionTitle>
     <p>
       We hope you enjoyed learning a bit about the basics of quantum computing and its applications! The problem of pseudo-random number generation remains unsolved for
@@ -198,10 +202,6 @@ const Text = () => (
       advanced cryptographer only a few years ago.
     </p>
 
-    <br />
-    <hr />
-
-    <br />
     <SectionTitle id="learn-more">Learn More</SectionTitle>
 
     <p>
