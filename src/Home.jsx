@@ -2,7 +2,6 @@ import Nullstack from "nullstack";
 import Caret from "./Caret";
 import Text from "./Text";
 import SectionTitle from "./SectionTitle";
-import "./Home.css";
 
 class Home extends Nullstack {
   animating = false;

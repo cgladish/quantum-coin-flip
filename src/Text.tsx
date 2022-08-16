@@ -25,6 +25,8 @@ const Text = () => (
       that result in a computer returning a number randomly.
     </p>
 
+    <img src="coinflip-fig1.png" class="mb-4" />
+
     <p>
       Surprisingly difficult, right? You can actually find doctorate programs<sup>1</sup>&nbsp;focused solely on the&nbsp;
       <a href="https://www.ox.ac.uk/admissions/graduate/courses/mathematics-random-systems">
@@ -38,7 +40,7 @@ const Text = () => (
       number in such a way that no human (or external computer) can predict what number will be selected. This
       functionality is important - for example:
     </p>
-    <ul>
+    <ul class="list-disc">
       <li>
         <p>
           Lottery drawings must be fair and unpredictable - whether the drawing is for school admittance, draft picks,
@@ -56,7 +58,7 @@ const Text = () => (
     </ul>
 
     <p>Today, computers generate random numbers in 1 of 2 ways:</p>
-    <ul>
+    <ul class="list-disc">
       <li>
         <p>
           For less important applications, pseudo-random numbers do just fine. This means that while the number is not
@@ -72,7 +74,7 @@ const Text = () => (
           random numbers. While this will feel random in any practical sense (no one can predict the next value,
           it&rsquo;ll contain the properties of the distributions it aims to simulate), there are 2 caveats:
         </p>
-        <ul>
+        <ul class="list-disc">
           <li>
             <p>
               Even atmospheric noise has patterns, and random.org&nbsp;
@@ -125,7 +127,10 @@ const Text = () => (
       will occur. It is, in a profound sense,&nbsp;<b>harnessing the inherent randomness of the universe<sup>3</sup> itself.</b>
     </p>
 
-    <br />
+    
+    <img src="coinflip-fig2.jpg" />
+    <p class="subtext">Credit: IBM newsroom</p>
+  
     <hr />
 
     <SectionTitle id="whats-going-on-with-the-diagram">What's going on with the diagram below the coin?</SectionTitle>
@@ -208,7 +213,7 @@ const Text = () => (
     </p>
 
     <p>If you want to dive deeper into the mathematics of quantum computing, see these resources:</p>
-    <ul>
+    <ul class="list-disc">
       <li>
         <p>
           <a href="https://quantum.country/qcvc">Quantum Computing for the Very Curious</a>
