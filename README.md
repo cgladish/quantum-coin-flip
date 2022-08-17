@@ -4,7 +4,7 @@
 
 ## How to run this Project
 
-Clone the backend project ([https://github.com/cgladish/quantum-coin-flip-backend](https://github.com/cgladish/quantum-coin-flip-backend)) and follow the instructions to run the getCoinFlips script. This will populate the DB with data.
+Project that handles populating the DB with data lives here: [https://github.com/cgladish/quantum-coin-flip-backend](https://github.com/cgladish/quantum-coin-flip-backend). Clone the backend project and follow the instructions to run the getCoinFlips script. This will populate the DB with data.
 
 Install the dependencies:
 
