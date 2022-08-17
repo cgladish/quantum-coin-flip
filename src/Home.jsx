@@ -42,7 +42,6 @@ class Home extends Nullstack {
     }, 6000);
 
     const result = await this.getResult();
-    console.log(result);
   };
 
   render() {
