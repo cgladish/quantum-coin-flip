@@ -7,6 +7,7 @@ class Home extends Nullstack {
   animating = false;
   flipping = false;
   flipResult = null;
+  hasClicked = false;
 
   static async getResult({ database }) {
     const flips = database.collection("flips");
@@ -22,6 +23,7 @@ class Home extends Nullstack {
   }
 
   toss = async () => {
+    this.hasClicked = true;
     if (this.animating) {
       return;
     }
@@ -92,6 +94,7 @@ class Home extends Nullstack {
             <hr />
             <div id="hadamard">H</div>
             <img id="measurement" src="measurement.png" />
+            {!this.hasClicked && <div id="click-to-flip">Click the coin to flip it</div>}
           </div>
           <Caret />
           <SectionTitle id="whats-going-on">What's going on?</SectionTitle>

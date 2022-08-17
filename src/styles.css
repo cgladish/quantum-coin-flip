@@ -422,3 +422,9 @@ p {
 .subtext {
   font-size: 12px;
 }
+
+#click-to-flip {
+  animation-delay: 5s !important;
+  left: calc(50% - 90px);
+  @apply opacity-0 animate-pulse absolute top-14 text-lg;
+}
