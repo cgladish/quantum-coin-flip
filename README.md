@@ -4,6 +4,8 @@
 
 ## How to run this Project
 
+Clone the backend project ([https://github.com/cgladish/quantum-coin-flip-backend](https://github.com/cgladish/quantum-coin-flip-backend)) and follow the instructions to run the getCoinFlips script. This will populate the DB with data.
+
 Install the dependencies:
 
 `npm install`
@@ -15,6 +17,8 @@ NULLSTACK_PROJECT_NAME="[dev] Quantum Coin Flip"
 NULLSTACK_PROJECT_DOMAIN="localhost"
 NULLSTACK_PROJECT_COLOR="#D22365"
 NULLSTACK_SERVER_PORT="3000"
+
+NULLSTACK_SECRETS_DB_URL="mongodb://user:pass@localhost:27017/db"
 ```
 
 Run the app in development mode:

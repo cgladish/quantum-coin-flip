@@ -14,5 +14,8 @@
     "start-nullstack": "npx nullstack start",
     "start-tailwind": "npx tailwindcss -i ./src/styles.css -o ./public/styles.css -m --watch",
     "build": "npx nullstack build --mode=ssr"
+  },
+  "dependencies": {
+    "mongodb": "^4.8.1"
   }
 }

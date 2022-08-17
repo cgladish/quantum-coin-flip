@@ -8,24 +8,41 @@ class Home extends Nullstack {
   flipping = false;
   flipResult = null;
 
-  toss = () => {
+  static async getResult({ database }) {
+    const flips = database.collection("flips");
+    const flip = await flips.findOneAndUpdate({ hasBeenUsed: false }, { $set: { hasBeenUsed: true } });
+    if (flip.value) {
+      return flip.value.result;
+    }
+
+    // Pick a random one if we've used everything in the db
+    for await (const usedFlip of flips.aggregate([{ $sample: { size: 1 } }])) {
+      return usedFlip.result;
+    }
+  }
+
+  toss = async () => {
     if (this.animating) {
       return;
     }
     this.animating = true;
     this.flipResult = null;
+
     setTimeout(() => {
       this.flipping = true;
     }, 3000);
     setTimeout(() => {
       this.animating = false;
       this.flipping = false;
-      if (Math.random() < 0.5) {
+      if (result === 1) {
         this.flipResult = "heads";
       } else {
         this.flipResult = "tails";
       }
     }, 6000);
+
+    const result = await this.getResult();
+    console.log(result);
   };
 
   render() {
